@@ -13,6 +13,7 @@
   </style>
 
   <script>
+    var x =1;
     var string = "0123456789ABCDEF";
     function go() {
       var result = "#";
@@ -21,14 +22,18 @@
       }
       var mine = document.getElementById('mine');
       mine.style.background = result;
-      alert("hi");
     }
+
+    setInterval(go, 50);
+    
   </script>
 </head>
 <body>
 
-  <div id="mine" onclick="go();">
-
+  <div id="mine" onclick="">
+    <p id="output">
+      pv
+    </p>
   </div>
 
 </body>
