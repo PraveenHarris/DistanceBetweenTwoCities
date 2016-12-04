@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+  #mine {
+    background-color: pink;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+  }
+  </style>
+
+  <script>
+    var string = "0123456789ABCDEF";
+    function go() {
+      var result = "#";
+      for(var i=0; i<6; i++) {
+        result += string.charAt(Math.random() * 16);
+      }
+      var mine = document.getElementById('mine');
+      mine.style.background = result;
+    }
+  </script>
+</head>
+<body>
+
+  <div id="mine" onclick="go();">
+
+  </div>
+
+</body>
+</html>
