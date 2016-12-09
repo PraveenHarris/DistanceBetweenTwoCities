@@ -2,39 +2,40 @@
 <html>
 <head>
   <style type="text/css">
-  #mine {
-    background-color: pink;
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
-  }
-  </style>
 
-  <script>
-    var x =1;
-    var string = "0123456789ABCDEF";
-    function go() {
-      var result = "#";
-      for(var i=0; i<6; i++) {
-        result += string.charAt(Math.random() * 16);
-      }
-      var mine = document.getElementById('mine');
-      mine.style.background = result;
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #canvas  {
+      height: 100%;
+      width: 100%;
+      background-color: pink;
+    }
+    #mine {
+      position: absolute;
+      left: 0;
+      top: 0;
     }
 
-    setInterval(go, 50);
-    
+  </style>
+  <script type="text/javascript">
+
+    function handle(e) {
+      var output = document.getElementById('mine');
+      var beta = Math.round(e.beta);
+      var gamma = Math.round(e.gamma);
+      output.innerHTML = beta + " " + gamma;
+    }
+
+    window.addEventListener('deviceorientation', handle);
+
   </script>
 </head>
 <body>
 
-  <div id="mine" onclick="">
-    <p id="output">
-      pv
-    </p>
-  </div>
+  <p id="mine">Praveen</p>
+  <canvas id="canvas"></canvas>
 
 </body>
 </html>
