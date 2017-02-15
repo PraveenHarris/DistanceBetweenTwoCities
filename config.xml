@@ -26,5 +26,5 @@
 
    <icon src = "res/android/mipmap-xxhdpi/ic_launcher.png" gap:platform = "android" gap:qualifier = "xxhdpi" />
 	
-   <access origin="http://maps.google.com" />
+   <access origin="https://maps.googleapis.com" subdomains="true" />
 </widget>
